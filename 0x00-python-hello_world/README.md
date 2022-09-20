@@ -89,3 +89,19 @@ followed by a new line*
 > You are not allowed to create new variables
 
 > You are not allowed to use string literals
+
+### 9. Easter Egg
+
+* *Write a Python script that prints "The Zen of Python", by Tim Peters, followed by a new line.*
+
+> Your script should be maximum 98 characters long
+
+### 10. Linked list cycle
+
+* *Write a function in C that checks if a singly linked list has a cycle in it*
+
+> Prototype: int check_cycle(listint_t *list);
+
+> Return: 0 if there is no cycle, 1 if there is a cycle
+
+* *Only these functions are allowed: write, printf, putchar, puts, malloc, free*
