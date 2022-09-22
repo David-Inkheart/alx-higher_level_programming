@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Tip: Read documentation on Python bytecode"""
+# Read python bytecode documentation
 def magic_calculation(a, b):
     """Match bytecode provided by Alx-Holberton School."""
     from magic_calculation_102 import add, sub
@@ -9,5 +9,6 @@ def magic_calculation(a, b):
         for i in range(4, 6):
             c = add(c, i)
         return (c)
+
     else:
         return sub(a, b)
