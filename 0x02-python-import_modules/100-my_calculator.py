@@ -8,7 +8,7 @@ if __name__ == "__main__":
     if len(sys.argv) != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
-    """put the operators and their correcsponsing func in a dictionary"""
+    """put the operators and their corresponding func in a dictionary"""
     ops = {"+": add, "-": sub, "*": mul, "/": div}
     if sys.argv[2] not in list(ops.keys()):
         print("Unknown operator. Available operators: +, -, * and /")
