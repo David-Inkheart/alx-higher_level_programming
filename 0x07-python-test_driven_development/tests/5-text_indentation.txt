@@ -1,0 +1,46 @@
+The ``text indentation`` module
+===========================
+
+Using ``text indentation``
+----------------------
+
+This is a text file in reStructuredText format.
+First import ``text_indentation`` from the ``text indentation`` module:
+
+    >>> text_indentation = __import__("5-text_indentation").text_indentation
+    >>> func = text_indentation
+
+Now use it:
+
+#Normal addition test
+>>> func("Lorem Ipsum.?:")
+Lorem Ipsum.
+<BLANKLINE>
+?
+<BLANKLINE>
+:
+<BLANKLINE>
+
+
+#Type Errors
+
+>>> func(4)
+Traceback (most recent call last):
+...
+TypeError: text must be string
+>>> func(12.3)
+Traceback (most recent call last):
+...
+TypeError: text must be string
+>>> func([])
+Traceback (most recent call last):
+...
+TypeError: text must be string
+>>> func({})
+Traceback (most recent call last):
+...
+TypeError: text must be string
+>>> func(1j)
+Traceback (most recent call last):
+...
+TypeError: text must be string
