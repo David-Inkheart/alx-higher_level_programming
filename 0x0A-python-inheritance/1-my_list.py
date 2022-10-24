@@ -1,16 +1,14 @@
 #!/usr/bin/python3
-"""
-Inheriting a list
+"""MyList
 """
 
 
 class MyList(list):
-
-    def __init__(self):
-        pass
+    """Contains list
+    """
 
     def print_sorted(self):
+        """Prints self in sorted format
         """
-        sorting a list.
-        """
+
         print(sorted(self))
