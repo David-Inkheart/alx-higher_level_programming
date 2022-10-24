@@ -10,4 +10,4 @@ class MyList(list):
         """
         sorting a list.
         """
-        print (sorted(self))
+        print(sorted(self))
