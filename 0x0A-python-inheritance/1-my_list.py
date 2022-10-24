@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Inherting from a list
+Inheriting a list
 """
 
 
