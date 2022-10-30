@@ -84,17 +84,22 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        '''Returns the area of the rectangle'''
         return self.__width * self.__height
 
     def display(self):
-        total = ''
-        for i in range(self.height):
-            total += ('#' * self.__width)
-            if i is not (self.__height - 1):
-                total += '\n'
-        print(total)
+        '''displays rectangle size with '#'
+        y is newline and x is space
+        '''
+        if self.__y != 0:
+            for newline in range(self.__y):
+                print()
+
+        for row in range(self.__height):
+            print((' ' * self.__x) + ('#' * self.__width))
 
     def __str__(self):
-        return '[Rectangle]' + ' (' + str(self.id) + ') '\
-            + str(self.__x) + '/' + str(self.__y) + ' - '\
+        '''returns a nicely printed string about Rectangle'''
+        return '[' + self.__class__.__name__ + ']' + ' (' + str(self.id) \
+            + ') ' + str(self.__x) + '/' + str(self.__y) + ' - '\
             + str(self.__width) + '/' + str(self.__height)
