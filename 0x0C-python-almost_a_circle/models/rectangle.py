@@ -103,3 +103,19 @@ class Rectangle(Base):
         return '[' + self.__class__.__name__ + ']' + ' (' + str(self.id) \
             + ') ' + str(self.__x) + '/' + str(self.__y) + ' - '\
             + str(self.__width) + '/' + str(self.__height)
+
+    def update(self, *args):
+        '''
+        Assigned arguments in order
+        '''
+        if len(args) != 0 or args is None:
+            try:
+                self.id = args[0]
+                self.__width = args[1]
+                self.__height = args[2]
+                self.__x = args[3]
+                self.__y = args[4]
+            except IndexError:
+                pass
+        else:
+            print()
