@@ -6,7 +6,7 @@ and to avoid duplicating the same code (by extension, same bugs)
 '''
 
 
-class Base():
+class Base:
     '''My base class'''
 
     __nb_objects = 0

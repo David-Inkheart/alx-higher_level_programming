@@ -26,10 +26,10 @@ class Rectangle(Base):
             ValueError: If either of x or y < 0.
         '''
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def width(self):
@@ -54,8 +54,8 @@ class Rectangle(Base):
         if type(value) != int:
             raise TypeError("height must be an integer")
         if value <= 0:
-            raise ValueError("width must be > 0")
-        self.height = value
+            raise ValueError("height must be > 0")
+        self.__height = value
 
     @property
     def x(self):
@@ -82,3 +82,14 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be > 0")
         self.__y = value
+
+    def area(self):
+        return self.__width * self.__height
+
+    def display(self):
+        total = ''
+        for i in range(self.height):
+            total += ('#' * self.__width)
+            if i is not (self.__height - 1):
+                total += '\n'
+        print(total)
