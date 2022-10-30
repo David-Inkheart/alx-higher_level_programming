@@ -104,11 +104,14 @@ class Rectangle(Base):
             + ') ' + str(self.__x) + '/' + str(self.__y) + ' - '\
             + str(self.__width) + '/' + str(self.__height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         '''
         Assigned arguments in order
         '''
-        if len(args) != 0 or args is None:
+        if len(kwargs) != 0 or kwargs is not None:
+            for kii, val in kwargs.items():
+                setattr(self, kii, val)
+        elif len(args) != 0 or args is not None:
             try:
                 self.id = args[0]
                 self.__width = args[1]
