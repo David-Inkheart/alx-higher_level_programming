@@ -93,3 +93,8 @@ class Rectangle(Base):
             if i is not (self.__height - 1):
                 total += '\n'
         print(total)
+
+    def __str__(self):
+        return '[Rectangle]' + ' (' + str(self.id) + ') '\
+            + str(self.__x) + '/' + str(self.__y) + ' - '\
+            + str(self.__width) + '/' + str(self.__height)
