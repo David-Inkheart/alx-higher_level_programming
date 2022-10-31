@@ -108,10 +108,10 @@ class Rectangle(Base):
         '''
         Assigned arguments in order
         '''
-        if len(kwargs) != 0 or kwargs is not None:
-            for kii, val in kwargs.items():
-                setattr(self, kii, val)
-        elif len(args) != 0 or args is not None:
+        if not args and not kwargs:
+            return
+
+        if args and len(args) != 0:
             try:
                 self.id = args[0]
                 self.__width = args[1]
@@ -121,4 +121,12 @@ class Rectangle(Base):
             except IndexError:
                 pass
         else:
-            print()
+            for kii, val in kwargs.items():
+                setattr(self, kii, val)
+
+    def to_dictionary(self):
+        '''
+        returns the dictionary representation of a Rectangle
+        '''
+        return {'x': self.__x, 'y': self.__y, 'id': self.id,
+                'height': self.__height, 'width': self.__width}
