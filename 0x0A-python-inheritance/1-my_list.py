@@ -4,11 +4,17 @@
 
 
 class MyList(list):
-    """Contains list
+    """inheriting from list class
     """
 
-    def print_sorted(self):
-        """Prints self in sorted format
+    def __init__(self):
+        """initializer for Mylist
         """
+        pass
 
-        print(sorted(self))
+    def print_sorted(self):
+        """Prints list in sorted format
+        """
+        sorted_list = list.copy(self)
+        list.sort(sorted_list)
+        print(sorted_list)
