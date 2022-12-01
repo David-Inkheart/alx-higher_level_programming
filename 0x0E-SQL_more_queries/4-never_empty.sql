@@ -2,6 +2,6 @@
 -- If the table id_not_null already exists, your script should not fail
 
 CREATE TABLE IF NOT EXISTS id_not_null (
-    id INT DEFAULT 1 UNIQUE,
-    name VARCHAR(256)
+    id INT DEFAULT 1,
+    name VARCHAR(256) NOT NULL
 );
