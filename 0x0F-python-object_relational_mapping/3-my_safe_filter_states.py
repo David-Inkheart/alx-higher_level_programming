@@ -13,25 +13,17 @@ import MySQLdb
 from sys import argv
 
 if __name__ == '__main__':
-    """
-    Access the database and get the states
-    from the database.
-    """
 
     db = MySQLdb.connect(host="localhost", user=argv[1], port=3306,
                          passwd=argv[2], db=argv[3])
 
-    cur = db.cursor()
+    with db.cursor() as cur:
+        cur.execute("SELECT * FROM states \
+                    WHERE BINARY name='{:s}' \
+                    ORDER BY id ASC".format(argv[4]))
 
-    cur.execute("SELECT * FROM states \
-                 WHERE BINARY name='{:s}' \
-                 ORDER BY id ASC".format(argv[4]))
+        numrows = cur.fetchall()
 
-    numrows = cur.fetchall()
-
-    if numrows is not None and len(argv) == 5:
+    if numrows is not None:
         for item in numrows:
             print(item)
-
-    cur.close()
-    db.close()
