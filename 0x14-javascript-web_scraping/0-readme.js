@@ -2,16 +2,15 @@
 // read a file, store its contents in a variable
 // then log its contents to the console
 
-const fs = require('fs').promises;
-const process = require('process');
+const fs = require('fs');
 
-async function readFile (filePath) {
-  try {
-    const data = await fs.readFile(filePath, 'utf-8');
-    console.log(data.toString());
-  } catch (error) {
-    console.log(error);
-  }
+function readFile (filePath) {
+  fs.readFile(filePath, 'utf-8', function (err, data) {
+    if (!err) {
+      console.log(data.toString());
+    } else {
+      console.log(err);
+    }
+  });
 }
-
 readFile(process.argv[2]);
