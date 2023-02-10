@@ -1,5 +1,6 @@
 # Tasks on JavaScript - Web scraping
 
+
 ## 0. Readme
 
 ### Write a script that reads and prints the content of a file.
@@ -9,6 +10,7 @@
 + The content of the file must be read in utf-8
 
 + If an error occurred during the reading, print the error object
+
 
 ## 1. Write me
 
@@ -22,6 +24,7 @@
 
 + If an error occurred during while writing, print the error object
 
+
 ## 2. Status code
 
 ### Write a script that display the status code of a GET request.
@@ -31,6 +34,7 @@
 + The status code must be printed like this: code: <status code>
 
 + You must use the module request
+
 
 ## 3. Star wars movie title
 
@@ -42,6 +46,7 @@
 
 + You must use the module request
 
+
 ## 4. Star wars Wedge Antilles
 
 ### Write a script that prints the number of movies where the character “Wedge Antilles” is present.
@@ -51,6 +56,7 @@
 + Wedge Antilles is character ID 18 - your script must use this ID for filtering the result of the API
 
 + You must use the module request
+
 
 ## 5. Loripsum
 
@@ -64,6 +70,7 @@
 
 - You must use the module request
 
+
 ## 6. How many completed?
 
 ### Write a script that computes the number of tasks completed by user id.
@@ -74,7 +81,8 @@
 
 - You must use the module request
 
-## Who was playing in this movie?
+
+## 7. Who was playing in this movie?
 
 ### Write a script that prints all characters of a Star Wars movie:
 
@@ -85,6 +93,7 @@
 - You must use the Star wars API
 
 - You must use the module request
+
 
 ## 8. Right order
 
