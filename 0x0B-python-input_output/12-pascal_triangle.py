@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Pascal's Triangle
+This code displays Pascal's Triangle
 """
 
 
