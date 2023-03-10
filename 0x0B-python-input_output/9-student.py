@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+add a method that gives a dictionary of an object
+"""
+
+
 class Student:
     def __init__(self, first_name, last_name, age):
         self.first_name = first_name
